@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Classification Result</h1>
+        <div class="result">
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image">
+            <h2>Prediction: {{ prediction }}</h2>
+            <p>Confidence: {{ "%.2f"|format(confidence) }}%</p>
+        </div>
+        <a href="{{ url_for('index') }}" class="button">Classify Another Image</a>
+    </div>
+</body>
+</html>
